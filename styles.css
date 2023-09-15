@@ -51,8 +51,8 @@ table {
 }
 :root {
 	--bg: #1b1930;
-	--bg-img: url('/images/background.png');
-	--icon: url('/images/sun.svg');
+	--bg-img: url('./images/background.png');
+	--icon: url('./images/sun.svg');
 	--body-text: #FFF;
 	--label-text: #e7e7e7;
 	--input-bg: #161427;
@@ -69,8 +69,8 @@ table {
 }
 :root.light {
 	--bg: #FFFFFF;
-	--bg-img: url('/images/light-bg.png');
-	--icon: url('/images/moon.svg');
+	--bg-img: url('./images/light-bg.png');
+	--icon: url('./images/moon.svg');
 	--body-text: #000000;
 	--label-text: #6d6d6d;
 	--input-bg: #fff;
