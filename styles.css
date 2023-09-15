@@ -1,0 +1,212 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+* {
+	box-sizing: border-box;
+}
+:root {
+	--bg: #1b1930;
+	--bg-img: url('/images/background.png');
+	--icon: url('/images/sun.svg');
+	--body-text: #FFF;
+	--label-text: #e7e7e7;
+	--input-bg: #161427;
+	--input-border: #32304d;
+	--input-highlight: #1e98c6;
+	--submit-bg: #1e98c6;
+	--error-text: #FFF;
+	--shadow: 0 1px 1px rgba(0,0,0,0.12), 
+	0 2px 2px rgba(0,0,0,0.12), 
+	0 4px 4px rgba(0,0,0,0.12), 
+	0 8px 8px rgba(0,0,0,0.12),
+	0 16px 16px rgba(0,0,0,0.12);
+	font-family: 'Roboto', sans-serif;
+}
+:root.light {
+	--bg: #FFFFFF;
+	--bg-img: url('/images/light-bg.png');
+	--icon: url('/images/moon.svg');
+	--body-text: #000000;
+	--label-text: #6d6d6d;
+	--input-bg: #fff;
+	--input-border: #d5d5d5;
+	--input-highlight: #73ce89;
+	--submit-bg: #73ce89;
+	--error-text: #000;
+	--shadow: 0 1px 1px rgba(0,0,0,0.07), 
+	0 2px 2px rgba(0,0,0,0.07), 
+	0 4px 4px rgba(0,0,0,0.07), 
+	0 8px 8px rgba(0,0,0,0.07),
+	0 16px 16px rgba(0,0,0,0.07);
+}
+.container {
+    display: flex;
+    height: 100vh;
+	background-color: var(--bg);
+}
+.left {
+    background-image: var(--bg-img);
+    background-size: cover;
+    background-position: center;
+}
+
+.left, .main {
+    flex: 1;
+}
+
+.main {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 40px;
+}
+
+#ToggleDisplay {
+	background: var(--icon) no-repeat center;
+	border: none;
+	display: block;
+	width: 30px;
+	height: 30px;
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	cursor: pointer;
+}
+
+.para {
+	font-size: 18px;
+	color: var(--body-text);
+	margin-bottom: 20px;
+	font-size: 1.4rem;
+	line-height: 1.8rem;
+	max-width: 650px;
+}
+
+.sub-heading {
+	color: var(--body-text);
+	font-size: 1.8rem;
+	font-weight: bold;
+	margin-bottom: 40px;
+}
+.italic {
+	font-style:italic;
+	font-weight:900;
+}
+
+label {
+	color: var(--label-text);
+	text-transform: uppercase;
+	font-size: 14px;
+	font-weight: bold;
+	display: block;
+	margin-bottom: 8px;
+}
+
+.text-input {
+	border: 1px solid var(--input-border);
+	padding: 10px;
+	background-color: var(--input-bg);
+	border-radius: 16px;
+	color: var(--body-text);
+	margin-left: -10px;
+	width: calc(100% + 10px);
+}
+.text-input:focus {
+	border: 2px solid var(--input-highlight);
+	padding: 9px;
+	outline: none;
+	box-shadow: var(--shadow)
+}
+.error .pass-input{
+	border: 2px solid red;
+	padding: 9px;
+}
+
+.error-msg {
+	color: var(--error-text);
+	position: absolute;
+	bottom: -18px;
+	font-size: 12px;
+	left: 0;
+	display: none;
+}
+
+.error .error-msg {
+	display: block;
+}
+/* .text-input:invalid {
+	border: 1px solid red;
+} */
+.form {
+	display: flex;
+	gap: 40px;
+	flex-wrap: wrap;
+	max-width: 750px;
+}
+
+.input-set {
+	flex: 1 1 calc(50% - 20px);
+	position: relative;
+}
+
+.submit-button {
+	flex: 1;
+	background: var(--submit-bg);
+	color: #FFF;
+	font-weight: bold;
+	border-radius: 16px;
+	border: none;
+	padding: 12px;
+	font-size: 1.2rem;
+	cursor: pointer;
+	margin-left: -10px;
+}
+
+.submit-button:hover {
+	box-shadow: var(--shadow)
+}
